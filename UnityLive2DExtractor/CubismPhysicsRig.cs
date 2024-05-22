@@ -110,6 +110,7 @@ namespace UnityLive2DExtractor
 
         public CubismPhysicsSubRig(BinaryReader reader)
         {
+            reader.ReadAlignedString();
             var numInput = reader.ReadInt32();
             Input = new CubismPhysicsInput[numInput];
             for (int i = 0; i < numInput; i++)
